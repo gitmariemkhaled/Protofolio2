@@ -1,0 +1,131 @@
+/* Global rules*/
+:root {
+  --main-color: #0099cc;
+  --text-color: #212529;
+  --sec-color: #bbb;
+  --main-transition: 0.3s;
+  --main-padding-top: 60px;
+  --main-padding-bottom: 60px;
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(255, 255, 255);
+  list-style-type: none;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto; /*give it margin auto from both sides the right and left to center the elements in it auto only work at left and right*/
+}
+@media (min-width: 768px) {
+  .container {
+  width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+section{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.sticky{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+/* End Global Rules */
+/* start wish */
+.wishlist {
+  padding-bottom: var(--main-padding-bottom);
+  padding-top: var(--main-padding-top);
+}
+
+.wishlist-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.table-container {
+  max-width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead th {
+  background-color: transparent; /* Transparent background */
+  color: black; /* Black text color */
+  border-bottom: 2px solid #ddd; /* Border only at the bottom */
+  padding: 12px; /* Padding for table header */
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(93, 97, 101, 0.5);
+}
+
+tbody tr td {
+  text-align: center;
+  color: #222; /* Text color for items */
+  padding: 25px 10px; /* Match design padding */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+#clear-wishlist {
+  background-color: transparent;
+  color: rgb(36, 149, 36);
+  border: 1px solid rgba(36, 149, 36, 0.4);
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#clear-wishlist:hover {
+  background-color: rgb(36, 149, 36);
+  color: #fff;
+}
+
+  /* end wish  */
+  

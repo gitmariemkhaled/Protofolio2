@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Start Loading Screen -->
+    <div id="loading-overlay">
+        <div class="loader">
+            <div class="truckWrapper">
+                <div class="truckBody">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 198 93" class="trucksvg">
+                        <path stroke-width="3" stroke="#282828" fill="#F83D3D"
+                            d="M135 22.5H177.264C178.295 22.5 179.22 23.133 179.594 24.0939L192.33 56.8443C192.442 57.1332 192.5 57.4404 192.5 57.7504V89C192.5 90.3807 191.381 91.5 190 91.5H135C133.619 91.5 132.5 90.3807 132.5 89V25C132.5 23.6193 133.619 22.5 135 22.5Z">
+                        </path>
+                        <path stroke-width="3" stroke="#282828" fill="#7D7C7C"
+                            d="M146 33.5H181.741C182.779 33.5 183.709 34.1415 184.078 35.112L190.538 52.112C191.16 53.748 189.951 55.5 188.201 55.5H146C144.619 55.5 143.5 54.3807 143.5 53V36C143.5 34.6193 144.619 33.5 146 33.5Z">
+                        </path>
+                        <path stroke-width="2" stroke="#282828" fill="#282828"
+                            d="M150 65C150 65.39 149.763 65.8656 149.127 66.2893C148.499 66.7083 147.573 67 146.5 67C145.427 67 144.501 66.7083 143.873 66.2893C143.237 65.8656 143 65.39 143 65C143 64.61 143.237 64.1344 143.873 63.7107C144.501 63.2917 145.427 63 146.5 63C147.573 63 148.499 63.2917 149.127 63.7107C149.763 64.1344 150 64.61 150 65Z">
+                        </path>
+                        <rect stroke-width="2" stroke="#282828" fill="#FFFCAB" rx="1" height="7" width="5" y="63"
+                            x="187"></rect>
+                        <rect stroke-width="2" stroke="#282828" fill="#282828" rx="1" height="11" width="4" y="81"
+                            x="193"></rect>
+                        <rect stroke-width="3" stroke="#282828" fill="#DFDFDF" rx="2.5" height="90" width="121" y="1.5"
+                            x="6.5"></rect>
+                        <rect stroke-width="2" stroke="#282828" fill="#DFDFDF" rx="2" height="4" width="6" y="84" x="1">
+                        </rect>
+                    </svg>
+                </div>
+                <div class="truckTires">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30" class="tiresvg">
+                        <circle stroke-width="3" stroke="#282828" fill="#282828" r="13.5" cy="15" cx="15"></circle>
+                        <circle fill="#DFDFDF" r="7" cy="15" cx="15"></circle>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 30 30" class="tiresvg">
+                        <circle stroke-width="3" stroke="#282828" fill="#282828" r="13.5" cy="15" cx="15"></circle>
+                        <circle fill="#DFDFDF" r="7" cy="15" cx="15"></circle>
+                    </svg>
+                </div>
+                <div class="road"></div>
+
+                <svg xml:space="preserve" viewBox="0 0 453.459 453.459" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg" id="Capa_1" version="1.1" fill="#000000" class="lampPost">
+                    <path d="M252.882,0c-37.781,0-68.686,29.953-70.245,67.358h-6.917v8.954c-26.109,2.163-45.463,10.011-45.463,19.366h9.993
+        c-1.65,5.146-2.507,10.54-2.507,16.017c0,28.956,23.558,52.514,52.514,52.514c28.956,0,52.514-23.558,52.514-52.514
+        c0-5.478-0.856-10.872-2.506-16.017h9.992c0-9.354-19.352-17.204-45.463-19.366v-8.954h-6.149C200.189,38.779,223.924,16,252.882,16
+        c29.952,0,54.32,24.368,54.32,54.32c0,28.774-11.078,37.009-25.105,47.437c-17.444,12.968-37.216,27.667-37.216,78.884v113.914
+        h-0.797c-5.068,0-9.174,4.108-9.174,9.177c0,2.844,1.293,5.383,3.321,7.066c-3.432,27.933-26.851,95.744-8.226,115.459v11.202h45.75
+        v-11.202c18.625-19.715-4.794-87.527-8.227-115.459c2.029-1.683,3.322-4.223,3.322-7.066c0-5.068-4.107-9.177-9.176-9.177h-0.795
+        V196.641c0-43.174,14.942-54.283,30.762-66.043c14.793-10.997,31.559-23.461,31.559-60.277C323.202,31.545,291.656,0,252.882,0z
+        M232.77,111.694c0,23.442-19.071,42.514-42.514,42.514c-23.442,0-42.514-19.072-42.514-42.514c0-5.531,1.078-10.957,3.141-16.017
+        h78.747C231.693,100.736,232.77,106.162,232.77,111.694z"></path>
+                </svg>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <nav class="sticky">
+        <div class="container d-flex">
+            <div class="caty caty-white">
+
+                <i class="fa-solid fa-bars icon"></i>
+                <h6>Categories</h6>
+                <ul class="cat d-none .d-op">
+                    <li><a href="#">Computers & LapTops</a></li>
+                    <li><a href="#">SmartPhones & Tablets</a></li>
+                    <li><a href="#">Cameras & HardWare</a></li>
+
+                </ul>
+            </div>
+            <div class="iconi">
+                <i class="fa-solid fa-bars"></i>
+                <span>Menu</span>
+            </div>
+            <div class="links">
+                <ul class="naving">
+                    <li><a href="./index.html" class="active">Home</a></li>
+                    <li><a href="#Super Deals">Super Deals</a></li>
+                    <li><a href="#New Arrivals">New Arrivals</a></li>
+                    <li class="page-links">
+                        <a href="#" class="links-in-page">Pages</a>
+                        <!-- links for Pages -->
+                        <ul class="pages d-none">
+                            <li><a href="./cart.html">Cart</a></li>
+                            <li><a href="./wishlist.html">wishlist</a></li>
+                            <li><a href="#">Product</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Blog">Blog</a></li>
+                    <li><a href="#Trends">Trends</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- start cart  -->
+    <section class="cart">
+        <div class="container">
+            <div class="card-content">
+                <h1>Your Cart</h1>
+                <img id="empty-cart" src="./imgs/empty-cart.svg" alt="Empty Cart"
+                    style="display: none;  height: auto; margin: auto;" />
+                <div class="table-container" id="table-container" style="display: none;">
+                    <table id="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Item Details</th>
+                                <th>Price</th>
+                                <th>Count</th>
+                                <th>Update Count</th>
+                                <th>Total Price</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-body">
+                            <!-- Cart items will be dynamically added here -->
+                        </tbody>
+                    </table>
+                    <div class="button-container">
+                        <button id="pay-now">Pay Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- end cart  -->
+    <!-- Start sec -->
+    <section class="sec">
+        <div class="container">
+            <div class="signup">
+                <div class="sign-content">
+                    <div class="im">
+                        <img src="./imgs/telegram.webp" alt="">
+                    </div>
+                    <div class="spoken">
+                        <h3>Sign Up For newsletter</h3>
+                        <span>...and receive %20 coupon for first shopping</span>
+                    </div>
+                </div>
+                <div class="in-out">
+                    <div class="input">
+                        <input type="email" placeholder="Enter Your Email">
+                        <button class="subs">Subscribe</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End sec -->
+    <!-- Start Footer -->
+    <div class="main-footer">
+        <div class="container">
+            <div class="ftr">
+                <h1 class="mainHead"><a href="#home">OneTech</a></h1>
+                <p>Got Question? Call Us 24/7</p>
+                <p class="numm">+38 068 005 3570</p>
+                <p class="email"><a href="amrsaeed1899@gmail.com">amrsaeed1899@gmail.com</a></p>
+                <address>17 Princess Road, London Grester London NW18JR, UK</address>
+                <ul class="social">
+                    <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ftr">
+                <h1>Find it Fast</h1>
+                <ul class="links">
+                    <li><a href="">Computers & Laptops</a></li>
+                    <li><a href="">Cameras & Photos</a></li>
+                    <li><a href="">Hardware</a></li>
+                    <li><a href="">Smartphones & Tablets</a></li>
+                    <li><a href="">TV & Audio</a></li>
+                    <li><a href="">Gadgets</a></li>
+                    <li><a href="">Car Electronics</a></li>
+                    <li><a href="">Video Games & Consoles</a></li>
+                </ul>
+            </div>
+            <div class="ftr">
+                <h1>Customer Care</h1>
+                <ul class="links">
+                    <li><a href="">My Account</a></li>
+                    <li><a href="">Order Tracking</a></li>
+                    <li><a href="">Wish List</a></li>
+                    <li><a href="">Customer Services</a></li>
+                    <li><a href="">Returns / Exchange</a></li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Product Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        <div class="container">
+            <p>
+                Copyright &copy;2024 All rights reserved | This template is made by <span>Amr Saeed</span>
+            </p>
+            <div class="payment">
+                <a href="#"><img src="../imgs/asset 55.webp" alt="" /></a>
+                <a href="#"><img src="../imgs/asset 56.webp" alt="" /></a>
+                <a href="#"><img src="../imgs/asset 57.webp" alt="" /></a>
+                <a href="#"><img src="../imgs/asset 58.webp" alt="" /></a>
+            </div>
+        </div>
+    </div>
+    </div>
+    </footer>
+    <!-- end footer  -->
+    <script>let proContainer = JSON.parse(localStorage.getItem("cart")) || []; // Load the cart from local storage
+
+        function loadCart() {
+            const cartBody = document.getElementById('cart-body');
+            const emptyCartImage = document.getElementById('empty-cart');
+            const tableContainer = document.getElementById('table-container');
+
+            cartBody.innerHTML = ''; // Clear existing rows
+
+            // Check if the cart is empty
+            if (proContainer.length === 0) {
+                emptyCartImage.style.display = 'block'; // Show empty cart image
+                tableContainer.style.display = 'none'; // Hide table and button
+                return; // Exit the function
+            } else {
+                emptyCartImage.style.display = 'none'; // Hide empty cart image
+                tableContainer.style.display = 'block'; // Show table and button
+            }
+
+            proContainer.forEach((item, i) => {
+                const totalPrice = (item.price * item.count).toFixed(2);
+                cartBody.innerHTML += `
+                    <tr>
+                        <td>
+                            <img src="${item.image}" alt="${item.name}" class="product-image">
+                            ${item.name} (${item.type})
+                        </td>
+                        <td>$${item.price.toFixed(2)}</td>
+                        <td>${item.count}</td>
+                        <td>
+                            <input type="number" value="${item.count}" min="1" class="count-input" data-index="${i}">
+                        </td>
+                        <td class="total-price" data-index="${i}">$${totalPrice}</td>
+                        <td>
+                            <button class="btn delete" onclick="delPro(${i})"><i class="fa-solid fa-trash"></i></button>
+                            <button class="btn update" onclick="updatePro(${i})">Update</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function delPro(i) {
+            proContainer.splice(i, 1);
+            localStorage.setItem("cart", JSON.stringify(proContainer));
+            loadCart();
+        }
+
+        function updatePro(i) {
+            const input = document.querySelector(`.count-input[data-index="${i}"]`);
+            const newCount = parseInt(input.value);
+
+            if (newCount > 0) {
+                proContainer[i].count = newCount;
+                localStorage.setItem("cart", JSON.stringify(proContainer));
+                loadCart();
+            } else {
+                alert("Please enter a valid count.");
+            }
+        }
+
+        function payNow() {
+            // Clear the cart from localStorage
+            localStorage.removeItem('cart');
+
+            proContainer = [];
+            loadCart();
+
+            alert('Payment successful. Your cart has been cleared.');
+        }
+
+        document.getElementById('pay-now').addEventListener('click', payNow);
+
+        document.addEventListener('DOMContentLoaded', loadCart);
+
+
+
+    </script>
+    <script src="all.min.js"></script>
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+
+</html>

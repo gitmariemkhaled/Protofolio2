@@ -1,0 +1,360 @@
+/* Global rules*/
+:root {
+    --main-color: #f25454;
+    --main-lite-color: #f2545491;
+    --main-transition: 0.3s;
+    --main-padding-top: 80px;
+    --main-padding-bottom: 80px;
+    --sec-color: #fafafa;
+}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto; /*give it margin auto from both sides the right and left to center the elements in it auto only work at left and right*/
+}
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+.special-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.special-heading h3{
+    font-size: 50px;
+    margin-bottom: 35px;
+    font-weight: bold;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 2;
+}
+.special-heading h3::before{
+    content: "";
+    position: absolute;
+    color: #f0f0f0;
+    left: 50%;
+    top: -52px;
+    /* transform: translate(-50%, -50%); */
+    transform: translateX(-50%);
+    z-index: -1;
+    font-size: 80px;
+    font-weight: 900;
+}
+.special-heading p{
+    margin-bottom: 50px;
+    line-height: 1.5;
+    color: #777;
+    font-size: 20px;
+}
+.special-heading h3::after{
+    content: "";
+    width: 30%;
+    height: 0.5px;
+    position: absolute;
+    background-color: black;
+    top: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+}
+
+.special-heading h3:hover::after{
+    width: 100%;
+}
+section{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--sec-color);
+}
+/* End Global rules*/
+/* start heading */
+/* body{
+      background-color: black;
+} */
+header{
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: transparent;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    min-height: 97px;  /*so when we display none the links the heaight of the header be the same */
+    /* background-color: #f25454; */
+}
+
+@media (max-width: 992px){
+    header .container{
+        gap: 26px;
+    }
+}
+
+header::after{
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100%;
+    background-color: #a2a2a2;
+    left: 0;
+    bottom: 0;
+}
+
+header .logo img{
+    height: 30px;
+}
+nav .toggle-menu{
+    display: none;
+    font-size: 20px;
+
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* flex-grow: 1;  same as flex 1 */
+    flex: 1 
+}
+nav .links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icons{
+    display: flex;
+    gap: 10px;
+}
+
+.icons a{
+    color : white;
+    font-size: 17px;
+    transition: var(--main-transition);
+
+}
+
+.icons a:hover{
+    color: var(--main-color);
+}
+
+.links ul{
+    display: flex;
+    /* gap: 25px; replace with padding in links */
+}
+
+@media (max-width: 767px){
+    .links ul{
+        display: none;
+    }
+    nav .toggle-menu{
+        color: #f25454;
+        display: flex;
+    }
+    nav .toggle-menu:hover + .links ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(0 0 0 / 50%);
+    }
+
+    nav .links ul li a{
+        padding: 15px;
+    }
+
+    .icons{
+        display: none;
+    }
+}
+
+header nav ul li a{
+    color: white;
+    font-size: 17px;
+    transition: var(--main-transition);
+    font-weight: 700;
+    padding: 40px 10px;
+    z-index: 2;
+    position: relative;
+    display: block;
+/* وقعت قدامي مشكلة هنا انه مكانش بيحترم البادينج غير من اليمين والشمال طبعاً لإن اللينكات دا عنصر انلاين فعملتها بلوك */
+}
+@media (max-width: 870px){
+    .icons{
+        gap: 7px;
+        margin-left: -4.5px;
+    }
+    .icons a{
+        font-size: 15px ;
+    }
+
+    header nav ul li a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1026px) and (min-width: 1023px){
+    header nav ul li a{
+        font-size: 19px;
+    }
+
+    header nav .icons a{
+        font-size: 19px;
+    }
+}
+.icons a:hover, header nav ul li a.active, header nav ul li a:hover {
+    color: var(--main-color);
+}
+  /* end heading */
+
+  /* start landing */
+.landing{
+    background-image: url(./img/slideshow-3.jpg);
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    background-position: center;
+  }
+
+.landing .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    text-align: center;
+    padding: 50px;
+    /* width: 40%; */
+    /* display: block;*/
+  }
+
+.landing .text h2{
+    font-size: 50px;
+    line-height: 1.5;
+    font-weight: bold;
+    max-width: 420px;
+    /* word-wrap: break-word; */
+  }
+@media (max-width: 780px){
+    .landing .text h2{
+        font-size: 40px; /*or padding of text to be 25px*/
+    }
+}
+
+.landing .controls{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    /* font-size: 30px; */
+    align-items: center;
+}
+
+.landing .controls a{
+    border: 1px solid aliceblue;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition);
+    color: white;
+    font-size: 19px;
+}
+/* @media (max-width: 768px){
+    .landing .controls{
+        display: none;
+    }
+} */
+.landing .controls a:hover{
+    background-color: aliceblue;
+    color: var(--main-color);
+}
+  /* end landing */
+  /* Start About */
+
+/* #About{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--sec-color);
+} */
+
+
+.special-heading h3::before{
+    content: "A";
+}
+
+#About .container{
+    display: flex;
+    justify-content: space-between; /*كان في مشكلة انه مش شغال طلع انه مش بيشتغل  غير لما يبقي في مساحة فاضية اصلاً والصورة والتيكست كانوا واخدين كل المساحة
+    فروحت قللت ال
+    flex basis بتاعت التيكست
+    وظبطت ال
+    width بتاعت الصورة
+    لما احط السكيلز بقي هدي الاتنين التيكست والسكيلز نفس ال
+    flex basis*/
+    align-items: center;
+}
+
+.container .text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-basis: 45%;
+}
+
+.container img{
+    width: 420px;
+    height: 420px;
+}
+
+
+  /* End About */
